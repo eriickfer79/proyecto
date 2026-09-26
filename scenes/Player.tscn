@@ -1,19 +1,18 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" path="res://icon.svg" id="icon_texture"]
-[ext_resource type="Script" path="res://scripts/Player.gd" id="player_script"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1"]
 
-[sub_resource type="RectangleShape2D" id="CollisionShape"]
-size = Vector2(28, 42)
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 14.0
+height = 52.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
-script = ExtResource("player_script")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.75, 0.8, 1, 1)
-position = Vector2(0, 0)
-scale = Vector2(0.22, 0.33)
-texture = ExtResource("icon_texture")
+script = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CollisionShape")
+shape = SubResource("1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -80)
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0

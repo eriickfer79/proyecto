@@ -1,44 +1,27 @@
-# Hollow Knight Inspired
+# Hollow Knight Inspired Platformer — Godot 4.7
 
-Este proyecto es una base de plataforma 2D inspirada en Hollow Knight.
+Prototipo original de plataformas 2D inspirado en metroidvanias. No incluye assets ni personajes de Hollow Knight: el personaje y el arte son originales y sirven como base editable.
+
+## Ejecutar
+
+1. Cloná el repositorio: `git clone https://github.com/eriickfer79/proyecto.git`
+2. Abrí Godot **4.7.x**.
+3. Elegí **Importar** y seleccioná la carpeta clonada.
+4. Presioná F6/F5 para ejecutar.
 
 ## Controles
 
-- A / D o flechas: moverse
-- W o Espacio: saltar
-- Shift: dash
-- Mouse izquierdo: ataque (preparado para ampliar más adelante)
+- A/D o flechas: moverse
+- Espacio/W: saltar; segundo salto en el aire
+- Shift/Q: dash
+- Click izquierdo/J: ataque
 
-## Objetivo
+## Incluye
 
-- Moverte por la escena
-- Saltar plataformas
-- Evitar a los enemigos
-- Experimentar con doble salto y dash
+- Controlador de plataforma con aceleración, fricción, gravedad, coyote time y jump buffer.
+- Doble salto y dash con enfriamiento.
+- Ataque cuerpo a cuerpo y enemigos con dos golpes de vida.
+- Tres enemigos patrulleros, plataformas, cámara suave, respawn y pantalla de zona superada.
+- Arte dibujado por código para que el proyecto funcione sin descargar recursos externos.
 
-## Archivos principales
-
-- `project.godot` : configuración del juego
-- `scenes/Main.tscn` : escena principal con plataformas y enemigos
-- `scenes/Player.tscn` : personaje principal
-- `scenes/Enemy.tscn` : enemigo patrullero
-- `scripts/Player.gd` : lógica del personaje
-- `scripts/Enemy.gd` : lógica del enemigo
-- `scripts/Main.gd` : respawn y UI
-
-## Cómo abrir el proyecto
-
-1. Cloná este repositorio.
-2. Abrí Godot 4.x.
-3. Seleccioná la carpeta del proyecto.
-4. Presioná Play.
-
-## Sugerencia
-
-Esto es una base muy buena para empezar a hacer un juego metroidvania o plataformero. Podés luego agregar:
-- más plataformas
-- enemigos con ataque
-- un jefe final
-- animaciones
-- efectos de partículas
-- sonido
+La versión actual está configurada para Godot 4.7 y usa el renderer Compatibility para funcionar en equipos modestos.
