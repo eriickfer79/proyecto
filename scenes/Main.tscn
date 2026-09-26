@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/Main.gd" id="1_x7x7m"]
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="2_5r3fp"]
+[ext_resource type="PackedScene" path="res://scenes/Enemy.tscn" id="3_7m5fc"]
+[ext_resource type="PackedScene" path="res://scenes/Coin.tscn" id="4_4xn3s"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_x7x7m")
+
+[node name="Player" parent="." instance=ExtResource("2_5r3fp")]
+position = Vector2(100, 100)
+
+[node name="Enemy" parent="." instance=ExtResource("3_7m5fc")]
+position = Vector2(950, 200)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_7m5fc")]
+position = Vector2(900, 500)
+
+[node name="Coin" parent="." instance=ExtResource("4_4xn3s")]
+position = Vector2(500, 200)
+
+[node name="Coin2" parent="." instance=ExtResource("4_4xn3s")]
+position = Vector2(700, 400)
+
+[node name="Coin3" parent="." instance=ExtResource("4_4xn3s")]
+position = Vector2(300, 520)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 80.0
+grow_horizontal = 2
+text = "Puntos: 0"
+label_settings = null
