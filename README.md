@@ -1,27 +1,40 @@
-# Hollow Knight Inspired Platformer — Godot 4.7
+# Heart of Darkness Inspired
 
-Prototipo original de plataformas 2D inspirado en metroidvanias. No incluye assets ni personajes de Hollow Knight: el personaje y el arte son originales y sirven como base editable.
+Este es un prototipo de acción-plataforma oscuro, con identidad visual tenebrosa, combate simple y una base muy sólida para seguir desarrollando.
 
 ## Ejecutar
 
 1. Cloná el repositorio: `git clone https://github.com/eriickfer79/proyecto.git`
-2. Abrí Godot **4.7.x**.
-3. Elegí **Importar** y seleccioná la carpeta clonada.
-4. Presioná F6/F5 para ejecutar.
+2. Abrí Godot **4.7.x**
+3. Importá la carpeta del proyecto
+4. Presioná Play
 
 ## Controles
 
-- A/D o flechas: moverse
-- Espacio/W: saltar; segundo salto en el aire
-- Shift/Q: dash
-- Click izquierdo/J: ataque
+- A / D o flechas: caminar
+- Espacio / W: saltar
+- Shift / Q: dash
+- Click izquierdo o J: ataque
 
-## Incluye
+## Qué incluye
 
-- Controlador de plataforma con aceleración, fricción, gravedad, coyote time y jump buffer.
-- Doble salto y dash con enfriamiento.
-- Ataque cuerpo a cuerpo y enemigos con dos golpes de vida.
-- Tres enemigos patrulleros, plataformas, cámara suave, respawn y pantalla de zona superada.
-- Arte dibujado por código para que el proyecto funcione sin descargar recursos externos.
+- Movimiento con aceleración y fricción
+- Salto + doble salto
+- Dash con enfriamiento
+- Ataque cuerpo a cuerpo
+- Enemigos patrulleros con dos golpes de vida
+- Respawn al caer o ser golpeado
+- Sección de plataformas con estilo gótico/oscuro
+- HUD simple y base para gameplay más profundo
 
-La versión actual está configurada para Godot 4.7 y usa el renderer Compatibility para funcionar en equipos modestos.
+## Ideas para seguir
+
+- camera shake
+- boss final
+- animaciones de ataque
+- particles y glow
+- menú principal
+- checkpoints
+- más niveles
+- audio y música ambiente
+

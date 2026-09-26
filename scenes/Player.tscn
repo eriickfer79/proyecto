@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=2 format=3]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
-radius = 14.0
+radius = 16.0
 height = 52.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
@@ -13,6 +13,5 @@ script = ExtResource("1")
 shape = SubResource("1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -80)
 position_smoothing_enabled = true
-position_smoothing_speed = 6.0
+position_smoothing_speed = 7.0

@@ -2,29 +2,28 @@
 config_version=5
 
 [application]
-config/name="Hollow Knight Inspired Platformer"
+config/name="Heart of Darkness Inspired"
 run/main_scene="res://scenes/Main.tscn"
+config/features=PackedStringArray("4.7")
 
 [display]
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/window_width_override=1280
-window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 
 [rendering]
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.025, 0.03, 0.07, 1)
+environment/defaults/default_clear_color=Color(0.04, 0.05, 0.08, 1)
 
 [input]
 move_left={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"physical_keycode":65), Object(InputEventKey,"physical_keycode":4194311)]
+"events": [Object(InputEventKey,"physical_keycode":65), Object(InputEventKey,"physical_keycode":4194319)]
 }
 move_right={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"physical_keycode":68), Object(InputEventKey,"physical_keycode":4194313)]
+"events": [Object(InputEventKey,"physical_keycode":68), Object(InputEventKey,"physical_keycode":4194321)]
 }
 jump={
 "deadzone": 0.5,
