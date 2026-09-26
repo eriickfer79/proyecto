@@ -1,38 +1,44 @@
-# MiPrimerJuego
+# Hollow Knight Inspired
 
-Este proyecto es una base mínima para un juego 2D en Godot.
-
-## Cómo abrirlo
-
-1. Cloná este repositorio.
-2. Abrí Godot Engine.
-3. En la pantalla principal, elegí "Import" o "Open".
-4. Seleccioná la carpeta del proyecto.
-5. Presioná Play (F5).
+Este proyecto es una base de plataforma 2D inspirada en Hollow Knight.
 
 ## Controles
 
-- W / A / S / D
-- o flechas del teclado
+- A / D o flechas: moverse
+- W o Espacio: saltar
+- Shift: dash
+- Mouse izquierdo: ataque (preparado para ampliar más adelante)
 
 ## Objetivo
 
-- Mover al jugador
-- Reunir monedas
-- Evitar los enemigos
+- Moverte por la escena
+- Saltar plataformas
+- Evitar a los enemigos
+- Experimentar con doble salto y dash
 
-## Archivos importantes
+## Archivos principales
 
-- `project.godot` : configuración principal del proyecto
-- `scenes/Main.tscn` : escena principal
-- `scenes/Player.tscn` : jugador
-- `scenes/Enemy.tscn` : enemigo
-- `scenes/Coin.tscn` : moneda
-- `scripts/*.gd` : lógica del juego
+- `project.godot` : configuración del juego
+- `scenes/Main.tscn` : escena principal con plataformas y enemigos
+- `scenes/Player.tscn` : personaje principal
+- `scenes/Enemy.tscn` : enemigo patrullero
+- `scripts/Player.gd` : lógica del personaje
+- `scripts/Enemy.gd` : lógica del enemigo
+- `scripts/Main.gd` : respawn y UI
 
-## Si querés empezar a modificarlo
+## Cómo abrir el proyecto
 
-- Cambiá el color del personaje en `scenes/Player.tscn`
-- Cambiá la velocidad en `scripts/Player.gd`
-- Agregá más monedas en `scenes/Main.tscn`
-- Hacé más enemigos y cambios visuales
+1. Cloná este repositorio.
+2. Abrí Godot 4.x.
+3. Seleccioná la carpeta del proyecto.
+4. Presioná Play.
+
+## Sugerencia
+
+Esto es una base muy buena para empezar a hacer un juego metroidvania o plataformero. Podés luego agregar:
+- más plataformas
+- enemigos con ataque
+- un jefe final
+- animaciones
+- efectos de partículas
+- sonido

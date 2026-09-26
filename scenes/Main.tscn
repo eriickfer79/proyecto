@@ -1,30 +1,77 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://scripts/Main.gd" id="1_x7x7m"]
-[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="2_5r3fp"]
-[ext_resource type="PackedScene" path="res://scenes/Enemy.tscn" id="3_7m5fc"]
-[ext_resource type="PackedScene" path="res://scenes/Coin.tscn" id="4_4xn3s"]
+[ext_resource type="Script" path="res://scripts/Main.gd" id="main_script"]
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="player_scene"]
+
+[sub_resource type="RectangleShape2D" id="FloorShape"]
+size = Vector2(1600, 40)
+
+[sub_resource type="RectangleShape2D" id="PlatformShape"]
+size = Vector2(220, 28)
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_x7x7m")
+script = ExtResource("main_script")
 
-[node name="Player" parent="." instance=ExtResource("2_5r3fp")]
-position = Vector2(100, 100)
+[node name="Player" parent="." instance=ExtResource("player_scene")]
+position = Vector2(140, 520)
 
-[node name="Enemy" parent="." instance=ExtResource("3_7m5fc")]
-position = Vector2(950, 200)
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(640, 670)
 
-[node name="Enemy2" parent="." instance=ExtResource("3_7m5fc")]
-position = Vector2(900, 500)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("FloorShape")
 
-[node name="Coin" parent="." instance=ExtResource("4_4xn3s")]
-position = Vector2(500, 200)
+[node name="ColorRect" type="ColorRect" parent="Floor"]
+offset_left = -800.0
+offset_top = -20.0
+offset_right = 800.0
+offset_bottom = 20.0
+color = Color(0.18, 0.18, 0.18, 1)
 
-[node name="Coin2" parent="." instance=ExtResource("4_4xn3s")]
-position = Vector2(700, 400)
+[node name="Platform1" type="StaticBody2D" parent="."]
+position = Vector2(360, 560)
 
-[node name="Coin3" parent="." instance=ExtResource("4_4xn3s")]
-position = Vector2(300, 520)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1"]
+shape = SubResource("PlatformShape")
+
+[node name="ColorRect" type="ColorRect" parent="Platform1"]
+offset_left = -110.0
+offset_top = -14.0
+offset_right = 110.0
+offset_bottom = 14.0
+color = Color(0.24, 0.22, 0.3, 1)
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(680, 470)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+shape = SubResource("PlatformShape")
+
+[node name="ColorRect" type="ColorRect" parent="Platform2"]
+offset_left = -110.0
+offset_top = -14.0
+offset_right = 110.0
+offset_bottom = 14.0
+color = Color(0.24, 0.22, 0.3, 1)
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(980, 380)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+shape = SubResource("PlatformShape")
+
+[node name="ColorRect" type="ColorRect" parent="Platform3"]
+offset_left = -110.0
+offset_top = -14.0
+offset_right = 110.0
+offset_bottom = 14.0
+color = Color(0.24, 0.22, 0.3, 1)
+
+[node name="Enemy1" parent="." instance=ExtResource("enemy_scene")]
+position = Vector2(1020, 620)
+
+[node name="Enemy2" parent="." instance=ExtResource("enemy_scene")]
+position = Vector2(760, 430)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -32,9 +79,9 @@ position = Vector2(300, 520)
 anchors_preset = 10
 anchor_right = 1.0
 offset_left = 20.0
-offset_top = 20.0
+offset_top = 16.0
 offset_right = -20.0
-offset_bottom = 80.0
+offset_bottom = 56.0
 grow_horizontal = 2
-text = "Puntos: 0"
-label_settings = null
+text = "Hollow Knight Inspired"
+horizontal_alignment = 1
